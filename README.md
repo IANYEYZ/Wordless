@@ -31,3 +31,12 @@ print(x)
 
 ~ For comment
 ```
+
+## Build
+First:
+
+`pip install click`
+
+Second:
+
+`python wordless.py {filename}`
