@@ -3,9 +3,9 @@ import parser as p
 
 @click.command()
 @click.argument('filename')
-def runAxion(filename):
-    """Run axion script"""
+def runWordless(filename):
+    """Run wordless script"""
     p.loadAndRunFile(filename, [{}])
 
 if __name__ == "__main__":
-    runAxion()
+    runWordless()
