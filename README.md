@@ -26,7 +26,7 @@ fact = x |> [
 ]
 
 ~ IO
-input(x)
+x = input()
 print(x)
 
 ~ For comment
