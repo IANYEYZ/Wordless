@@ -1,7 +1,7 @@
 # Wordless
 Wordless is a programming language that has no reserved words
 
-It was designed specifically for fast prototyping and concept proving
+It was designed and implemented to teach me how to make a programming language
 
 ## Syntax
 There's no reserved word in Wordless(there is some pre-defined ones, for something like print(x)).
