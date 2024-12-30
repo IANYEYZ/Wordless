@@ -9,6 +9,19 @@ def loadAndRunFile(filename, env):
     parseProgram(tokens, env)
     # print(res)
 
+buffer = []
+
+def input_stream(line):
+    global buffer
+    while True:
+        # print("Call from line " + str(line) + ":")
+        # print(buffer)
+        if not buffer:
+            # print("No buffer!")
+            buffer = input().split()
+        # print(buffer)
+        yield buffer.pop(0)
+
 class value:
     # If value is a function:
     # val = (tokens, names)
@@ -32,6 +45,10 @@ class value:
         elif self.val == "import":
             loadAndRunFile(vals[0], env)
             return value("val", None)
+        elif self.val == "input":
+            return value("val", int(next(input_stream(0))))
+        elif self.val == "inputStr":
+            return value("val", next(input_stream(0)))
         else:
             return callCustom(self.getVal(env), vals, env)
 
